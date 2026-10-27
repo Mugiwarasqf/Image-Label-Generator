@@ -1,7 +1,7 @@
 terraform {
   required_version = ">= 1.6.0"
   required_providers {
-    aws = { source = "hashicorp/aws", version = "~> 5.0" }
+    aws     = { source = "hashicorp/aws", version = "~> 5.0" }
     archive = { source = "hashicorp/archive", version = "~> 2.4" }
   }
 }
@@ -65,8 +65,8 @@ resource "aws_iam_role" "lambda_exec" {
 
 data "aws_iam_policy_document" "lambda_policy" {
   statement {
-    sid     = "Logs"
-    actions = ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"]
+    sid       = "Logs"
+    actions   = ["logs:CreateLogGroup", "logs:CreateLogStream", "logs:PutLogEvents"]
     resources = ["*"]
   }
   statement {

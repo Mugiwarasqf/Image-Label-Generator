@@ -5,12 +5,12 @@ variable "project_name" {
 
 variable "aws_region" {
   type    = string
-  default = "eu-west-2"   # London region
+  default = "eu-west-2" # London region
 }
 
 variable "bucket_name" {
   type    = string
-  default = "numenhaus-rekognition-uploads"  # must be globally unique
+  default = "numenhaus-rekognition-uploads" # must be globally unique
 }
 
 variable "table_name" {
